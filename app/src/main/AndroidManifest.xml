@@ -1,0 +1,60 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nepalpolice.circle073">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <permission
+        android:name="com.nepalpolice.pustakalaya.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme" >
+        <activity android:name=".Splash"
+            android:noHistory="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--Update Dialog-->
+        <service android:name=".update.UpdateService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity android:name=".update.UpdateDialog"
+            android:theme="@style/AppTheme"/>
+
+        <!-- Firebase Notifications -->
+
+        <!-- ./Firebase Notifications -->
+
+
+        <!--Tours-->
+        <!--Tours-->
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme"/>
+
+
+        <activity android:name=".feedback.MainActivity"
+            android:theme="@style/AppTheme"/>
+
+
+        <activity android:name=".profile.profile"
+            android:theme="@style/AppTheme"/>
+
+
+
+
+
+
+    </application>
+
+</manifest>
